@@ -1,0 +1,261 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2026-10-27T13:00:00.000Z",
+  "__export_source": "insomnia.desktop.app:v8.6.1",
+  "resources": [
+    {
+      "_id": "wrk_1",
+      "_type": "workspace",
+      "name": "Atividade CRUD Spring Boot",
+      "scope": "collection",
+      "parentId": null
+    },
+    {
+      "_id": "env_base",
+      "_type": "environment",
+      "name": "Base Environment",
+      "parentId": "wrk_1",
+      "data": {
+        "base_url": "http://localhost:8080"
+      }
+    },
+    {
+      "_id": "fld_estudantes",
+      "_type": "request_group",
+      "name": "Estudantes",
+      "parentId": "wrk_1"
+    },
+    {
+      "_id": "req_1",
+      "_type": "request",
+      "parentId": "fld_estudantes",
+      "name": "Cadastrar (POST)",
+      "method": "POST",
+      "url": "{{ _.base_url }}/estudantes",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "parameters": [],
+      "authentication": {},
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"id\": \"1\",\n  \"nome\": \"João da Silva\",\n  \"idade\": 30,\n  \"email\": \"joao.silva@email.com\"\n}"
+      }
+    },
+    {
+      "_id": "req_2",
+      "_type": "request",
+      "parentId": "fld_estudantes",
+      "name": "Buscar todos (GET)",
+      "method": "GET",
+      "url": "{{ _.base_url }}/estudantes",
+      "headers": [],
+      "parameters": [],
+      "authentication": {}
+    },
+    {
+      "_id": "req_3",
+      "_type": "request",
+      "parentId": "fld_estudantes",
+      "name": "Buscar por ID (GET)",
+      "method": "GET",
+      "url": "{{ _.base_url }}/estudantes/1",
+      "headers": [],
+      "parameters": [],
+      "authentication": {}
+    },
+    {
+      "_id": "req_4",
+      "_type": "request",
+      "parentId": "fld_estudantes",
+      "name": "Atualizar (PUT)",
+      "method": "PUT",
+      "url": "{{ _.base_url }}/estudantes/1",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "parameters": [],
+      "authentication": {},
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"nome\": \"João da Silva\",\n  \"idade\": 30,\n  \"email\": \"joao.silva@email.com\"\n}"
+      }
+    },
+    {
+      "_id": "req_5",
+      "_type": "request",
+      "parentId": "fld_estudantes",
+      "name": "Excluir (DELETE)",
+      "method": "DELETE",
+      "url": "{{ _.base_url }}/estudantes/1",
+      "headers": [],
+      "parameters": [],
+      "authentication": {}
+    },
+    {
+      "_id": "fld_cursos",
+      "_type": "request_group",
+      "name": "Cursos",
+      "parentId": "wrk_1"
+    },
+    {
+      "_id": "req_6",
+      "_type": "request",
+      "parentId": "fld_cursos",
+      "name": "Cadastrar (POST)",
+      "method": "POST",
+      "url": "{{ _.base_url }}/cursos",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "parameters": [],
+      "authentication": {},
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"id\": \"1\",\n  \"descricao\": \"Engenharia de Software\"\n}"
+      }
+    },
+    {
+      "_id": "req_7",
+      "_type": "request",
+      "parentId": "fld_cursos",
+      "name": "Buscar todos (GET)",
+      "method": "GET",
+      "url": "{{ _.base_url }}/cursos",
+      "headers": [],
+      "parameters": [],
+      "authentication": {}
+    },
+    {
+      "_id": "req_8",
+      "_type": "request",
+      "parentId": "fld_cursos",
+      "name": "Buscar por ID (GET)",
+      "method": "GET",
+      "url": "{{ _.base_url }}/cursos/1",
+      "headers": [],
+      "parameters": [],
+      "authentication": {}
+    },
+    {
+      "_id": "req_9",
+      "_type": "request",
+      "parentId": "fld_cursos",
+      "name": "Atualizar (PUT)",
+      "method": "PUT",
+      "url": "{{ _.base_url }}/cursos/1",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "parameters": [],
+      "authentication": {},
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"descricao\": \"Engenharia de Software\"\n}"
+      }
+    },
+    {
+      "_id": "req_10",
+      "_type": "request",
+      "parentId": "fld_cursos",
+      "name": "Excluir (DELETE)",
+      "method": "DELETE",
+      "url": "{{ _.base_url }}/cursos/1",
+      "headers": [],
+      "parameters": [],
+      "authentication": {}
+    },
+    {
+      "_id": "fld_professores",
+      "_type": "request_group",
+      "name": "Professores",
+      "parentId": "wrk_1"
+    },
+    {
+      "_id": "req_11",
+      "_type": "request",
+      "parentId": "fld_professores",
+      "name": "Cadastrar (POST)",
+      "method": "POST",
+      "url": "{{ _.base_url }}/professores",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "parameters": [],
+      "authentication": {},
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"id\": \"1\",\n  \"nome\": \"Maria Souza\",\n  \"idade\": 40,\n  \"email\": \"maria.souza@email.com\"\n}"
+      }
+    },
+    {
+      "_id": "req_12",
+      "_type": "request",
+      "parentId": "fld_professores",
+      "name": "Buscar todos (GET)",
+      "method": "GET",
+      "url": "{{ _.base_url }}/professores",
+      "headers": [],
+      "parameters": [],
+      "authentication": {}
+    },
+    {
+      "_id": "req_13",
+      "_type": "request",
+      "parentId": "fld_professores",
+      "name": "Buscar por ID (GET)",
+      "method": "GET",
+      "url": "{{ _.base_url }}/professores/1",
+      "headers": [],
+      "parameters": [],
+      "authentication": {}
+    },
+    {
+      "_id": "req_14",
+      "_type": "request",
+      "parentId": "fld_professores",
+      "name": "Atualizar (PUT)",
+      "method": "PUT",
+      "url": "{{ _.base_url }}/professores/1",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "parameters": [],
+      "authentication": {},
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"nome\": \"Maria Souza\",\n  \"idade\": 40,\n  \"email\": \"maria.souza@email.com\"\n}"
+      }
+    },
+    {
+      "_id": "req_15",
+      "_type": "request",
+      "parentId": "fld_professores",
+      "name": "Excluir (DELETE)",
+      "method": "DELETE",
+      "url": "{{ _.base_url }}/professores/1",
+      "headers": [],
+      "parameters": [],
+      "authentication": {}
+    }
+  ]
+}
